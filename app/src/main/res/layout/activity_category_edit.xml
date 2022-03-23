@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/current_category_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/new_category_name"
+        app:layout_constraintHorizontal_weight="1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_current_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/category"
+            android:hint="@string/current_category"
+            android:autofillHints=""
+            android:inputType="none"
+            android:editable="false"
+            tools:ignore="Deprecated" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/new_category_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/current_category_name"
+        app:layout_constraintHorizontal_weight="1"
+        app:hintAnimationEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_new_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:inputType="text"
+            android:hint="@string/new_category"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_current_color"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/current_color"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/current_category_name"
+        app:layout_constraintEnd_toStartOf="@+id/text_new_color"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_new_color"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/new_color"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/text_current_color"
+        app:layout_constraintTop_toBottomOf="@+id/new_category_name"
+/>
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/bar_current_color"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_current_color"
+        app:layout_constraintEnd_toStartOf="@+id/bar_new_color"
+        app:dividerThickness="3dp"
+        app:dividerInsetStart="15dp"
+        app:dividerInsetEnd="30dp"/>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/bar_new_color"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/bar_current_color"
+        app:layout_constraintTop_toBottomOf="@+id/text_new_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:dividerThickness="3dp"
+        app:dividerInsetStart="15dp"
+        app:dividerInsetEnd="30dp"/>
+
+<!--    <com.madrapps.pikolo.RGBColorPicker-->
+<!--        android:id="@+id/color_picker"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/save_button"-->
+<!--        pikolo:arc_length="105"-->
+<!--        pikolo:radius_offset="20dp"-->
+<!--        pikolo:red_start_angle="30"-->
+<!--        pikolo:blue_start_angle="270"-->
+<!--        pikolo:green_start_angle="150"-->
+<!--        />-->
+
+    <com.madrapps.pikolo.HSLColorPicker
+        android:id="@+id/color_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/save_button"/>
+    <ImageView
+        android:id="@+id/color_center"
+        android:layout_width="@dimen/two_hundred_dp"
+        android:layout_height="@dimen/two_hundred_dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic__020_08_08_1349_profile2cm_276x276"
+        app:layout_constraintBottom_toBottomOf="@+id/color_picker"
+        app:layout_constraintEnd_toEndOf="@+id/color_picker"
+        app:layout_constraintStart_toStartOf="@+id/color_picker"
+        app:layout_constraintTop_toTopOf="@+id/color_picker"
+        tools:ignore="ContentDescription" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/back_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:text="@string/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/save_button"
+        app:strokeColor="@color/purple_700"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/save_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:text="@string/save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/back_button"
+        app:layout_constraintEnd_toStartOf="@+id/delete_button"
+        app:strokeColor="@color/purple_700"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/delete_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:text="@string/delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/save_button"
+        app:strokeColor="@color/purple_700"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

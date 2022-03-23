@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/category_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hintAnimationEnabled="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_category_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:hint="@string/category"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/bar_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/category_name"
+        app:layout_constraintBottom_toBottomOf="@+id/category_name"
+        app:layout_constraintEnd_toEndOf="@+id/category_name"
+        app:dividerThickness="@dimen/divider_thickness"
+        app:dividerInsetStart="@dimen/hundred_dp"
+        app:dividerInsetEnd="@dimen/margin_small_middle"
+        />
+
+    <com.madrapps.pikolo.HSLColorPicker
+        android:id="@+id/color_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/category_name"
+        app:layout_constraintBottom_toTopOf="@+id/back_button"
+        />
+    <ImageView
+        android:id="@+id/color_center"
+        android:layout_width="@dimen/two_hundred_dp"
+        android:layout_height="@dimen/two_hundred_dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_fox_girl_black_lin_white"
+        app:layout_constraintBottom_toBottomOf="@+id/color_picker"
+        app:layout_constraintEnd_toEndOf="@+id/color_picker"
+        app:layout_constraintStart_toStartOf="@+id/color_picker"
+        app:layout_constraintTop_toTopOf="@+id/color_picker"
+        tools:ignore="ContentDescription"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/back_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/save_button"
+        app:strokeColor="@color/purple_700"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/save_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/back_button"
+        app:strokeColor="@color/purple_700"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

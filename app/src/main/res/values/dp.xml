@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tiny_dp">1dp</dimen>
+    <dimen name="divider_thickness">5dp</dimen>
+    <dimen name="five">5dp</dimen>
+    <dimen name="ten">10dp</dimen>
+    <dimen name="fifteen">15dp</dimen>
+    <dimen name="margin_small">10dp</dimen>
+    <dimen name="margin_small_middle">15dp</dimen>
+    <dimen name="margin_middle">20dp</dimen>
+    <dimen name="margin_large">30dp</dimen>
+    <dimen name="hundred_dp">100dp</dimen>
+    <dimen name="two_hundred_dp">200dp</dimen>
+</resources>
