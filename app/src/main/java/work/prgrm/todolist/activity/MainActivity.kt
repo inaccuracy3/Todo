@@ -1,20 +1,23 @@
 package work.prgrm.todolist.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.*
 import work.prgrm.todolist.R
 import work.prgrm.todolist.adapter.TodoAdapter
 import work.prgrm.todolist.entity.TodolistWithCategoriesEntity
-import work.prgrm.todolist.repository.TodoRepository
 import work.prgrm.todolist.repository.TodolistWithCategoriesRepository
+
 
 class MainActivity : AppCompatActivity(),AdapterView.OnItemLongClickListener,AdapterView.OnItemClickListener {
     private var recyclerTodo:RecyclerView? = null
@@ -23,6 +26,11 @@ class MainActivity : AppCompatActivity(),AdapterView.OnItemLongClickListener,Ada
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val root = findViewById<View>(R.id.activity_main).parent as ViewGroup
+        val toolbar: Toolbar = LayoutInflater.from(this).inflate(R.layout.toolbar, root, false) as Toolbar
+        root.addView(toolbar, 0)
+//        val toolbar:Toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
 
         recyclerTodo = findViewById(R.id.recycler_todo)
 

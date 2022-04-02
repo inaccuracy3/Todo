@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <include layout="@layout/toolbar"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/category_name"

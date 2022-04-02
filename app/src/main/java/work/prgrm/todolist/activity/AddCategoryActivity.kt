@@ -9,6 +9,7 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.core.graphics.BlendModeColorFilterCompat
 import androidx.core.graphics.BlendModeCompat
 import com.google.android.material.divider.MaterialDivider
@@ -34,7 +35,8 @@ class AddCategoryActivity : AppCompatActivity() {
         val colorCenter: ImageView = findViewById(R.id.color_center)
         val backButton: Button = findViewById(R.id.back_button)
         val saveButton: Button = findViewById(R.id.save_button)
-
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
         colorPicker.setColorSelectionListener(object:SimpleColorSelectionListener(){
             override fun onColorSelected(color: Int) {
                 editCategory.setTextColor(color)

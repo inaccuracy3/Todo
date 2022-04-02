@@ -27,8 +27,6 @@ class AddTodoActivity:AppCompatActivity() {
         setContentView(R.layout.activity_todo_add)
         val datePicker = MDatePicker()
         val calendar = Calendar.getInstance()
-        val actionBar: ActionBar? = supportActionBar
-        actionBar?.title = getString(R.string.title_add_todo)
         var termType: TermType = TermType.ONCE
         var importanceType:ImportanceType = ImportanceType.ADDITIVE
         var category:CategoryEntity? = null
