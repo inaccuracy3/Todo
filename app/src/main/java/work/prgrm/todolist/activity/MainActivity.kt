@@ -8,8 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.Button
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.*
@@ -28,9 +30,16 @@ class MainActivity : AppCompatActivity(),AdapterView.OnItemLongClickListener,Ada
         setContentView(R.layout.activity_main)
         val root = findViewById<View>(R.id.activity_main).parent as ViewGroup
         val toolbar: Toolbar = LayoutInflater.from(this).inflate(R.layout.toolbar, root, false) as Toolbar
+
         root.addView(toolbar, 0)
 //        val toolbar:Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
+
+        val drawerLayout:DrawerLayout = findViewById(R.id.drawer_layout)
+        val actionBarDrawerToggle:ActionBarDrawerToggle = ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.app_name,R.string.app_name)
+        actionBarDrawerToggle.drawerArrowDrawable.color = getColor(R.color.white)
+        drawerLayout.addDrawerListener(actionBarDrawerToggle)
+        actionBarDrawerToggle.syncState()
 
         recyclerTodo = findViewById(R.id.recycler_todo)
 

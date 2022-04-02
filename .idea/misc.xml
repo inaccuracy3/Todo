@@ -7,6 +7,7 @@
         <entry key="..\:/Users/Ritz/AndroidStudioProjects/Todolist/app/src/main/res/drawable-v24/view_pressed_selector.xml" value="0.196" />
         <entry key="..\:/Users/Ritz/AndroidStudioProjects/Todolist/app/src/main/res/drawable-v24/view_pressed_selector_drawable.xml" value="0.196" />
         <entry key="..\:/Users/Ritz/AndroidStudioProjects/Todolist/app/src/main/res/drawable/ic__020_08_08_1349_profile2cm_276x276.xml" value="0.208" />
+        <entry key="..\:/Users/Ritz/AndroidStudioProjects/Todolist/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.1265" />
         <entry key="..\:/Users/Ritz/AndroidStudioProjects/Todolist/app/src/main/res/drawable/ic_fox_girl_black_lin_white.xml" value="0.196" />
         <entry key="..\:/Users/Ritz/AndroidStudioProjects/Todolist/app/src/main/res/drawable/ic_launcher_background.xml" value="0.196" />
         <entry key="..\:/Users/Ritz/AndroidStudioProjects/Todolist/app/src/main/res/drawable/layout_background.xml" value="0.2115" />
@@ -20,6 +21,7 @@
         <entry key="..\:/Users/Ritz/AndroidStudioProjects/Todolist/app/src/main/res/layout/item_menu.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Ritz/AndroidStudioProjects/Todolist/app/src/main/res/layout/item_todo.xml" value="0.5" />
         <entry key="..\:/Users/Ritz/AndroidStudioProjects/Todolist/app/src/main/res/layout/list_item.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/Ritz/AndroidStudioProjects/Todolist/app/src/main/res/layout/menu_layout.xml" value="0.1" />
         <entry key="..\:/Users/Ritz/AndroidStudioProjects/Todolist/app/src/main/res/layout/toolbar.xml" value="0.67" />
         <entry key="..\:/Users/Ritz/AndroidStudioProjects/Todolist/app/src/main/res/menu/drawer_menu.xml" value="0.20052083333333334" />
         <entry key="..\:/Users/Ritz/AndroidStudioProjects/Todolist/app/src/main/res/menu/menu.xml" value="0.20416666666666666" />
